@@ -55,7 +55,9 @@ public class MyApp extends BaseApp implements OnConnectToServerListener {
         // 只在主进程初始化，否则会导致重复收到消息
         if (getCurProcessName(this).equals(BuildConfig.APPLICATION_ID)) {
             // 如果uikit是以aar的方式引入 ，那么需要在此对Config里面的属性进行配置，如：
-            // Config.IM_SERVER_HOST = "im.example.com";
+            Config.IM_SERVER_HOST = "122.142.119.254";
+            Config.APP_SERVER_HOST = "122.142.119.254";
+            Config.APP_SERVER_PORT = 8888;
             WfcUIKit wfcUIKit = WfcUIKit.getWfcUIKit();
             wfcUIKit.init(this);
             wfcUIKit.setEnableNativeNotification(true);
